@@ -37,7 +37,7 @@ export default function Header() {
         setMousePos({ x, y });
       }}
     >
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 hidden sm:block">
         {SHAPES.map((shape) => (
           <span
             key={shape.posClass}
@@ -51,45 +51,57 @@ export default function Header() {
         ))}
       </div>
 
-      {/* Content vẫn nằm trong max-w-6xl ở giữa */}
-      <div className="mx-auto max-w-6xl px-4 pt-6 md:pt-10 min-h-screen flex flex-col">
+      {/* Content */}
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 min-h-screen flex flex-col">
         <Navbar />
 
-        <div className="relative mt-10 md:mt-4 flex flex-1 flex-col justify-center">
-          {/* Ảnh bên phải */}
-          <div className="pointer-events-none absolute right-0 top-[45%] hidden -translate-y-1/2 md:block">
-            <div className="w-64 md:w-72 lg:w-80 h-72 md:h-80 lg:h-96 overflow-hidden rounded-3xl">
+        <div className="relative mt-6 sm:mt-8 md:mt-4 flex flex-1 flex-col justify-center">
+          <div className="pointer-events-none absolute right-0 top-1/2 hidden md:block -translate-y-1/2">
+            <div className="w-60 md:w-72 lg:w-80 h-64 md:h-80 lg:h-96 overflow-hidden rounded-3xl">
               <img
                 src="/images/vung.png"
-                alt="ảnh vung"
+                alt="Portrait"
                 className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
 
-          <HeroContent onOpen={() => setIsAboutOpen(true)} />
+          <div className="flex flex-col gap-6 md:gap-0 md:flex-row">
+            <div className="md:w-[60%]">
+              <HeroContent onOpen={() => setIsAboutOpen(true)} />
+            </div>
 
-          {/* Nút scroll xuống skills */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+            <div className="mt-6 md:mt-0 md:hidden">
+              <div className="mx-auto w-44 sm:w-56 h-52 sm:h-64 overflow-hidden rounded-3xl">
+                <img
+                  src="/images/vung.png"
+                  alt="Portrait"
+                  className="w-full h-full object-cover opacity-90"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-6 sm:bottom-8">
             <button
               onClick={scrollToSkills}
-              className="group flex flex-col items-center gap-2"
+              className="group flex flex-col items-center gap-1 sm:gap-2"
             >
-              <span className="text-[10px] uppercase tracking-[0.2em] text-slate-100">
+              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-slate-100">
                 Skills
               </span>
 
-              <div className="relative flex items-center justify-center h-10 w-10">
+              <div className="relative flex items-center justify-center h-8 w-8 sm:h-10 sm:w-10">
                 <span className="transition-opacity duration-200 group-hover:opacity-0">
-                  <div className="w-[2px] mt-6 h-14 bg-slate-500 rounded-full"></div>
+                  <div className="w-[2px] mt-4 sm:mt-5 h-10 sm:h-12 bg-slate-500 rounded-full" />
                 </span>
 
                 <span
                   className="absolute text-slate-500 opacity-0 
                      group-hover:opacity-100 group-hover:text-slate-400
                      transition-all duration-200 
-                     group-hover:scale-y-300
-                     group-hover:scale-x-150"
+                     group-hover:scale-y-150
+                     group-hover:scale-x-125"
                 >
                   ↓
                 </span>

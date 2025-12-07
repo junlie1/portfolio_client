@@ -8,23 +8,55 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
   return (
     <section
       id="hero"
-      className="relative mt-10 md:mt-4 flex flex-1 flex-col justify-center overflow-hidden"
+      className="
+        relative
+        mt-8 sm:mt-10 md:mt-4
+        flex flex-1 flex-col justify-center
+      "
     >
-      {/* Hero content */}
-      <div className="relative z-10 max-w-3xl md:-mt-20 md:ml-10">
-        <div className="space-y-10">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#d4af37] drop-shadow-[0_0_4px_rgba(212,175,55,0.6)]">
+      <div
+        className="
+          relative z-10
+          max-w-2xl sm:max-w-3xl
+          px-2 sm:px-0
+          md:-mt-20 md:ml-10
+        "
+      >
+        {/* Top text */}
+        <div className="space-y-6 sm:space-y-10">
+          <p
+            className="
+              text-xs sm:text-sm
+              uppercase tracking-[0.25em]
+              text-[#d4af37]
+              drop-shadow-[0_0_4px_rgba(212,175,55,0.6)]
+              text-center sm:text-left
+            "
+          >
             Interactive Front-end Developer
           </p>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
+          <h1
+            className="
+              text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+              font-extrabold tracking-tight text-white
+              leading-tight
+              text-center sm:text-left
+            "
+          >
             Nguyễn Lê Trung
           </h1>
         </div>
 
-        <div className="mt-4">
+        {/* Subtitle */}
+        <div className="mt-4 text-center sm:text-left">
           <p
-            className="max-w-xl text-sm md:text-lg text-slate-100 italic"
+            className="
+              max-w-md sm:max-w-xl
+              mx-auto sm:mx-0
+              text-sm sm:text-base md:text-lg
+              text-slate-100 italic
+            "
             style={{ fontFamily: "'Times New Roman', Times, serif" }}
           >
             I love crafting interactive, modern interfaces and bringing ideas to
@@ -32,23 +64,23 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
           </p>
         </div>
 
-        <div className="pt-6">
+        {/* Button */}
+        <div className="pt-6 flex justify-center sm:justify-start">
           <button
             type="button"
             onClick={onOpen}
             className="
-              group
-              relative inline-flex items-center
+              group relative inline-flex items-center
               transition-all duration-300
             "
           >
-            {/* PILL CAM */}
+            {/* PILL */}
             <span
               className="
                 relative inline-block overflow-hidden
                 rounded-md
-                px-6 py-3
-                text-sm font-semibold tracking-[0.15em]
+                px-5 sm:px-6 py-2.5 sm:py-3
+                text-xs sm:text-sm font-semibold tracking-[0.15em]
                 text-white uppercase
                 bg-gradient-to-r from-[#E94635] to-[#FF876A]
                 shadow-lg shadow-[#E94635]/40
@@ -56,11 +88,10 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
             >
               <span className="relative z-10">About Me</span>
 
-              {/* blue swipe chỉ trong pill */}
+              {/* Light swipe */}
               <span
                 className="
-                  pointer-events-none
-                  absolute inset-0
+                  pointer-events-none absolute inset-0
                   -translate-x-[120%]
                   bg-gradient-to-r from-transparent via-sky-400/70 to-transparent
                   transition-transform duration-800 ease-in-out
@@ -69,22 +100,21 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
               />
             </span>
 
-            {/* SVG MŨI TÊN – dài, đè lên cạnh phải pill */}
+            {/* Arrow */}
             <span
               className="
-                relative -ml-7
+                relative -ml-6 sm:-ml-7
                 flex items-center
                 transition-transform duration-300
                 group-hover:translate-x-1
               "
             >
               <svg
-                className="h-5 w-24"
+                className="h-4 sm:h-5 w-20 sm:w-24"
                 viewBox="0 0 40 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {/* đường thẳng dài */}
                 <line
                   x1="5"
                   y1="6"
@@ -94,7 +124,6 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
                   strokeWidth="1"
                   strokeLinecap="round"
                 />
-                {/* đầu mũi tên */}
                 <path
                   d="M14 2 L20 6 L14 10"
                   stroke="white"
