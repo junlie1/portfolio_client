@@ -1,10 +1,54 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+
 type AboutPopupProps = {
   isOpen: boolean;
   onClose: () => void;
 };
 
 export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
   if (!isOpen) return null;
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setStatus("idle");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send");
+      }
+
+      setStatus("success");
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
@@ -27,6 +71,7 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
           ×
         </button>
 
+        {/* Left */}
         <div className="relative w-full md:w-1/2 bg-slate-50 px-5 py-7 sm:px-8 sm:py-10 text-slate-900 overflow-y-auto">
           <div className="relative z-10">
             <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -56,19 +101,28 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
           </div>
         </div>
 
+        {/* Right: form */}
         <div className="w-full md:w-1/2 bg-slate-950 px-5 py-7 sm:px-8 sm:py-10 text-slate-100 overflow-y-auto">
           <h3 className="text-lg sm:text-xl font-semibold">Let&apos;s talk.</h3>
           <p className="mt-2 text-xs sm:text-sm text-slate-300">
             New projects, internship inquiries or even a coffee chat.
           </p>
 
-          <form className="mt-6 sm:mt-8 space-y-5 sm:space-y-6">
+          <form
+            className="mt-6 sm:mt-8 space-y-5 sm:space-y-6"
+            onSubmit={handleSubmit}
+          >
             <div>
               <label className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-slate-300">
                 Name *
               </label>
               <input
                 type="text"
+                required
+                value={form.name}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, name: e.target.value }))
+                }
                 className="mt-1 w-full border-b border-slate-700 bg-transparent px-0 py-2 text-sm outline-none focus:border-indigo-400"
               />
             </div>
@@ -79,6 +133,11 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
               </label>
               <input
                 type="email"
+                required
+                value={form.email}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, email: e.target.value }))
+                }
                 className="mt-1 w-full border-b border-slate-700 bg-transparent px-0 py-2 text-sm outline-none focus:border-indigo-400"
               />
             </div>
@@ -89,22 +148,40 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
               </label>
               <textarea
                 rows={3}
+                required
+                value={form.message}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, message: e.target.value }))
+                }
                 className="mt-1 w-full border-b border-slate-700 bg-transparent px-0 py-2 text-sm outline-none focus:border-indigo-400 resize-none"
               />
             </div>
 
             <button
               type="submit"
+              disabled={submitting}
               className="
                 mt-3 sm:mt-4 inline-flex items-center justify-center
                 rounded-md bg-[#ff5a3c] px-5 sm:px-6 py-2.5
                 text-sm font-semibold text-white
                 shadow-lg shadow-[#ff5a3c]/40
                 transition hover:-translate-y-[2px] hover:bg-[#ff765d]
+                disabled:opacity-60 disabled:hover:translate-y-0
               "
             >
-              Send Message
+              {submitting ? "Sending..." : "Send Message"}
             </button>
+
+            {status === "success" && (
+              <p className="text-xs sm:text-sm text-emerald-400">
+                Message sent! I&apos;ll get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-xs sm:text-sm text-red-400">
+                Something went wrong. Please try again later.
+              </p>
+            )}
           </form>
         </div>
       </div>
