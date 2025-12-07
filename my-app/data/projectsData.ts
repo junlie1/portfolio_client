@@ -1,0 +1,123 @@
+interface Link {
+  lable?: string;
+  demo?: string;
+  github?: string;
+}
+
+export interface ProjectDetail {
+  slug: string;
+  title: string;
+  subtitle?: string;
+  heroImage: string;
+  techStack: string[];
+  overview: string;
+  role: string;
+  period: string;
+  highlights: string[];
+  links?: Link[];
+  images?: string[];
+}
+
+export const projectsData: ProjectDetail[] = [
+  {
+    slug: "fullstack-developer-intern",
+    title: "Fullstack Developer Intern",
+    subtitle: "Internal tools & dashboards for the company.",
+    heroImage: "/images/titan/home.png",
+    techStack: ["Next.js", "FastAPI", "MySQL"],
+    overview:
+      "Worked as a fullstack developer intern, building internal dashboards, reusable components, and backend services using Next.js, FastAPI, and MySQL.",
+    role: "Fullstack Intern",
+    period: "05/2025 - 08/2025",
+    highlights: [
+      "Built reusable UI components and structured layouts following component-based architecture.",
+      "Designed and integrated REST API endpoints to support core user interactions and data operations.",
+      "Modeled relational data structures and optimized SQL queries for efficient and consistent data access.",
+      "Implemented authentication flows, validation, pagination, and routing logic across the system.",
+      "Applied clean coding principles, modular design, and separation of concerns to maintain code quality.",
+      "Gained hands-on experience with CI/CD workflows, Dockerized deployments, and microservices-aligned architecture.",
+      "Collaborated with PM, BA, designers, and developers in Agile sprints—participating in standups and code reviews.",
+    ],
+    links: [],
+    images: ["/images/husky.jpg", "/images/husky1.jpg"],
+  },
+  {
+    slug: "bus-ticket-booking-system",
+    title: "Bus Ticket Booking System",
+    subtitle: "Online ticket booking platform with chatbot support.",
+    heroImage: "/images/bus/home.png",
+    techStack: [
+      "Flutter",
+      "React.js",
+      "Node.js",
+      "Python (Django)",
+      "Firebase Functions",
+      "Firebase Storage",
+      "Cloudinary",
+    ],
+    overview:
+      "A bus ticket booking platform with mobile and web interfaces, supporting route search, schedules, seat selection, and chatbot-based assistance.",
+    role: "Fullstack Developer",
+    period: "01/2025 - 04/2025",
+    highlights: [
+      "Prototyped route, schedule, and seat-selection screens with responsive layouts.",
+      "Implemented paginated, lazy-loaded lists with proper loading, empty, and error states.",
+      "Built Python scripts to process chatbot training data and support AI model integration.",
+      "Applied Firebase Functions to automate backend tasks and support chatbot workflows.",
+      "Integrated Firebase Storage and Cloudinary to handle media and asset management.",
+    ],
+    links: [
+      {
+        lable: "Backend Nodejs",
+        github: "https://github.com/junlie1/backend_tttn",
+      },
+    ],
+    images: ["/images/husky.jpg", "/images/husky1.jpg"],
+  },
+  {
+    slug: "multi-store-app",
+    title: "Multi Store App",
+    subtitle:
+      "Cross-platform e-commerce system with real-time inventory and secure payments.",
+    heroImage: "/images/multi/admin/home.png",
+    techStack: ["Node.js", "Flutter", "MongoDB", "Cloudinary", "Stripe"],
+    overview:
+      "A multi-store e-commerce application supporting real-time inventory tracking, cross-platform mobile apps, and secure payment processing using Stripe.",
+    role: "Fullstack Developer",
+    period: "09/2024 - 12/2024",
+    highlights: [
+      "Built a multi-store e-commerce system with real-time inventory management and Stripe-based payment integration.",
+      "Led a small development team, managing schedules and coordinating task assignments.",
+      "Developed cross-platform mobile features using Flutter, applying lifecycle concepts similar to React Native.",
+      "Implemented backend services with Node.js and MongoDB, ensuring scalable data structures.",
+      "Integrated Cloudinary for image and asset management, improving media handling performance.",
+    ],
+
+    links: [
+      {
+        lable: "Backend Nodejs",
+        github: "https://github.com/junlie1/Nhom3_DACN_backend_CNTT_VAA-FITVAA",
+      },
+      {
+        lable: "Admin Web Flutter",
+        github:
+          "https://github.com/junlie1/Nhom3_DACN_AdminWeb_CNTT_VAA-FITVAA",
+      },
+      {
+        lable: "Vendor App Flutter",
+        github:
+          "https://github.com/junlie1/Nhom3_DACN_VendorApp_CNTT_VAA-FITVAA",
+      },
+      {
+        lable: "Customer App Flutter",
+        github: "https://github.com/junlie1/Nhom3_DACN_App_CNTT_VAA-FITVAA",
+      },
+    ],
+
+    images: ["/images/husky.jpg", "/images/husky1.jpg"],
+  },
+];
+
+export function getProjectBySlug(slug: string): ProjectDetail | undefined {
+  return projectsData.find((p) => p.slug === slug);
+}
