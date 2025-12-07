@@ -20,61 +20,6 @@ export interface ProjectDetail {
 
 export const projectsData: ProjectDetail[] = [
   {
-    slug: "fullstack-developer-intern",
-    title: "Fullstack Developer Intern",
-    subtitle: "Internal tools & dashboards for the company.",
-    heroImage: "/images/titan/home.png",
-    techStack: ["Next.js", "FastAPI", "MySQL"],
-    overview:
-      "Worked as a fullstack developer intern, building internal dashboards, reusable components, and backend services using Next.js, FastAPI, and MySQL.",
-    role: "Fullstack Intern",
-    period: "05/2025 - 08/2025",
-    highlights: [
-      "Built reusable UI components and structured layouts following component-based architecture.",
-      "Designed and integrated REST API endpoints to support core user interactions and data operations.",
-      "Modeled relational data structures and optimized SQL queries for efficient and consistent data access.",
-      "Implemented authentication flows, validation, pagination, and routing logic across the system.",
-      "Applied clean coding principles, modular design, and separation of concerns to maintain code quality.",
-      "Gained hands-on experience with CI/CD workflows, Dockerized deployments, and microservices-aligned architecture.",
-      "Collaborated with PM, BA, designers, and developers in Agile sprints—participating in standups and code reviews.",
-    ],
-    links: [],
-    images: ["/images/husky.jpg", "/images/husky1.jpg"],
-  },
-  {
-    slug: "bus-ticket-booking-system",
-    title: "Bus Ticket Booking System",
-    subtitle: "Online ticket booking platform with chatbot support.",
-    heroImage: "/images/bus/home.png",
-    techStack: [
-      "Flutter",
-      "React.js",
-      "Node.js",
-      "Python (Django)",
-      "Firebase Functions",
-      "Firebase Storage",
-      "Cloudinary",
-    ],
-    overview:
-      "A bus ticket booking platform with mobile and web interfaces, supporting route search, schedules, seat selection, and chatbot-based assistance.",
-    role: "Fullstack Developer",
-    period: "01/2025 - 04/2025",
-    highlights: [
-      "Prototyped route, schedule, and seat-selection screens with responsive layouts.",
-      "Implemented paginated, lazy-loaded lists with proper loading, empty, and error states.",
-      "Built Python scripts to process chatbot training data and support AI model integration.",
-      "Applied Firebase Functions to automate backend tasks and support chatbot workflows.",
-      "Integrated Firebase Storage and Cloudinary to handle media and asset management.",
-    ],
-    links: [
-      {
-        lable: "Backend Nodejs",
-        github: "https://github.com/junlie1/backend_tttn",
-      },
-    ],
-    images: ["/images/husky.jpg", "/images/husky1.jpg"],
-  },
-  {
     slug: "multi-store-app",
     title: "Multi Store App",
     subtitle:
@@ -114,7 +59,94 @@ export const projectsData: ProjectDetail[] = [
       },
     ],
 
-    images: ["/images/husky.jpg", "/images/husky1.jpg"],
+    images: [
+      //Customer images
+      "/images/multi/customer/home.png",
+      "/images/multi/customer/product_detail.png",
+      "/images/multi/customer/add_to_cart.png",
+      "/images/multi/customer/address.png",
+      "/images/multi/customer/cart.png",
+      "/images/multi/customer/category.png",
+      "/images/multi/customer/logout.png",
+      "/images/multi/customer/order_history.png",
+      "/images/multi/customer/order_status.png",
+      "/images/multi/customer/product_detail.png",
+      "/images/multi/customer/product_review.png",
+      "/images/multi/customer/profile.png",
+      "/images/multi/customer/search.png",
+      "/images/multi/customer/signin.png",
+      "/images/multi/customer/stripe_payment.png",
+      "/images/multi/customer/sub_category.png",
+
+      //Vendor images
+      "/images/multi/vendor/home.png",
+      "/images/multi/vendor/add_product.png",
+      "/images/multi/vendor/dashboard.png",
+      "/images/multi/vendor/order_detail.png",
+      "/images/multi/vendor/process.png",
+      "/images/multi/vendor/cancle.png",
+      "/images/multi/vendor/process.png",
+      "/images/multi/vendor/process.png",
+    ],
+  },
+  {
+    slug: "fullstack-developer-intern",
+    title: "Fullstack Developer Intern",
+    subtitle: "Internal tools & dashboards for the company.",
+    heroImage: "/images/titan/home.png",
+    techStack: ["Next.js", "FastAPI", "MySQL"],
+    overview:
+      "Worked as a fullstack developer intern, building internal dashboards, reusable components, and backend services using Next.js, FastAPI, and MySQL.",
+    role: "Fullstack Intern",
+    period: "05/2025 - 08/2025",
+    highlights: [
+      "Built reusable UI components and structured layouts following component-based architecture.",
+      "Designed and integrated REST API endpoints to support core user interactions and data operations.",
+      "Modeled relational data structures and optimized SQL queries for efficient and consistent data access.",
+      "Implemented authentication flows, validation, pagination, and routing logic across the system.",
+      "Applied clean coding principles, modular design, and separation of concerns to maintain code quality.",
+      "Gained hands-on experience with CI/CD workflows, Dockerized deployments, and microservices-aligned architecture.",
+      "Collaborated with PM, BA, designers, and developers in Agile sprints—participating in standups and code reviews.",
+    ],
+    links: [],
+    images: [],
+  },
+  {
+    slug: "bus-ticket-booking-system",
+    title: "Bus Ticket Booking System",
+    subtitle: "Online ticket booking platform with chatbot support.",
+    heroImage: "/images/bus/home.png",
+    techStack: [
+      "Flutter",
+      "React.js",
+      "Node.js",
+      "Python (Django)",
+      "Firebase Functions",
+      "Firebase Storage",
+      "Cloudinary",
+    ],
+    overview:
+      "A bus ticket booking platform with mobile and web interfaces, supporting route search, schedules, seat selection, and chatbot-based assistance.",
+    role: "Fullstack Developer",
+    period: "01/2025 - 04/2025",
+    highlights: [
+      "Prototyped route, schedule, and seat-selection screens with responsive layouts.",
+      "Implemented paginated, lazy-loaded lists with proper loading, empty, and error states.",
+      "Built Python scripts to process chatbot training data and support AI model integration.",
+      "Applied Firebase Functions to automate backend tasks and support chatbot workflows.",
+      "Integrated Firebase Storage and Cloudinary to handle media and asset management.",
+    ],
+    links: [
+      {
+        lable: "Frontend ReactJs",
+        github: "https://github.com/junlie1/customer_tttn",
+      },
+      {
+        lable: "Backend NodeJs",
+        github: "https://github.com/junlie1/backend_tttn",
+      },
+    ],
+    images: [],
   },
 ];
 
