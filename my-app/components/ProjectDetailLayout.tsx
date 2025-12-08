@@ -59,7 +59,7 @@ export default function ProjectDetailLayout({ project }: Props) {
 
       if (link.github) {
         items.push({
-          label: link.lable ?? "GitHub Repository",
+          label: link.label ?? "GitHub Repository",
           url: link.github,
           color: "bg-emerald-400",
         });
@@ -67,7 +67,7 @@ export default function ProjectDetailLayout({ project }: Props) {
 
       if (link.demo) {
         items.push({
-          label: link.lable ? `${link.lable} – Demo` : "Live Demo",
+          label: link.label ? `${link.label} – Demo` : "Live Demo",
           url: link.demo,
           color: "bg-amber-400",
         });

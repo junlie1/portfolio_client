@@ -142,7 +142,7 @@ export default function Card({
                 shadow-lg shadow-[#E94635]/40
               "
             >
-              <span className="relative z-10">Case study</span>
+              <span className="relative z-10">View</span>
 
               <span
                 className="

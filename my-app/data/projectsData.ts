@@ -1,5 +1,5 @@
 interface Link {
-  lable?: string;
+  label?: string;
   demo?: string;
   github?: string;
 }
@@ -40,21 +40,21 @@ export const projectsData: ProjectDetail[] = [
 
     links: [
       {
-        lable: "Backend Nodejs",
+        label: "Backend Nodejs",
         github: "https://github.com/junlie1/Nhom3_DACN_backend_CNTT_VAA-FITVAA",
       },
       {
-        lable: "Admin Web Flutter",
+        label: "Admin Web Flutter",
         github:
           "https://github.com/junlie1/Nhom3_DACN_AdminWeb_CNTT_VAA-FITVAA",
       },
       {
-        lable: "Vendor App Flutter",
+        label: "Vendor App Flutter",
         github:
           "https://github.com/junlie1/Nhom3_DACN_VendorApp_CNTT_VAA-FITVAA",
       },
       {
-        lable: "Customer App Flutter",
+        label: "Customer App Flutter",
         github: "https://github.com/junlie1/Nhom3_DACN_App_CNTT_VAA-FITVAA",
       },
     ],
@@ -90,8 +90,33 @@ export const projectsData: ProjectDetail[] = [
     ],
   },
   {
+    slug: "dxdlabs-backend-api-system",
+    title: "DxDLabs Backend API System (Internal Project)",
+    subtitle: "TypeScript backend powering the digital contract workflow.",
+    heroImage: "/images/dxdlab/home.png",
+    techStack: ["TypeScript", "Node.js", "REST API", "Clean Architecture"],
+    overview:
+      "Backend service developed at DxDLabs to support an end-to-end digital contract ecosystem — including authentication, role management, wallet operations, contract signing workflow, secure storage, and activity tracking.",
+    role: "Backend Developer (TypeScript)",
+    period: "09/2025 - 12/2025",
+    highlights: [
+      "Implemented over 25+ REST API endpoints using TypeScript and Node.js to handle authentication, contract signing, profile management, and administrator functions.",
+      "Designed secure authentication flows including Sign In, Sign Up, Reset Password, and 2FA Device Setup.",
+      "Developed document-related APIs: Upload to Drive, Delete from Drive, Display Drive Content, and Priority Storage handling.",
+      "Built user-facing contract APIs such as Display Contract List, Recent Contracts, Contract Details, Sign History, and Signature Chart statistics.",
+      "Created wallet management and transaction APIs, including displaying balance, transaction history, and notification integration.",
+      "Implemented admin-level features: Role Management API (assign roles, permissions) and Administrator API for system-level supervision.",
+      "Integrated remaining-signature tracking, profile update, email update, and secure data validation middleware.",
+      "Applied clean architecture principles—separating controllers, services, repositories, DTOs, and validation layers.",
+      "Collaborated closely with PM, BA, and frontend teams to refine API contracts and support rapid iteration.",
+    ],
+    links: [],
+    images: [],
+  },
+
+  {
     slug: "fullstack-developer-intern",
-    title: "Fullstack Developer Intern",
+    title: "Fullstack Developer Intern (Internal Project)",
     subtitle: "Internal tools & dashboards for the company.",
     heroImage: "/images/titan/home.png",
     techStack: ["Next.js", "FastAPI", "MySQL"],
@@ -138,11 +163,11 @@ export const projectsData: ProjectDetail[] = [
     ],
     links: [
       {
-        lable: "Frontend ReactJs",
+        label: "Frontend ReactJs",
         github: "https://github.com/junlie1/customer_tttn",
       },
       {
-        lable: "Backend NodeJs",
+        label: "Backend NodeJs",
         github: "https://github.com/junlie1/backend_tttn",
       },
     ],
