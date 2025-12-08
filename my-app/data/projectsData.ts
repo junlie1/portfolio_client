@@ -146,7 +146,30 @@ export const projectsData: ProjectDetail[] = [
         github: "https://github.com/junlie1/backend_tttn",
       },
     ],
-    images: [],
+    images: [
+      //Customer images
+      "/images/bus/customer/signup.png",
+      "/images/bus/customer/signin.png",
+      "/images/bus/customer/signin_gg.png",
+      "/images/bus/customer/signin_fb.png",
+      "/images/bus/customer/chatbot.png",
+      "/images/bus/customer/search_ticket.png",
+      "/images/bus/customer/select_seat.png",
+      "/images/bus/customer/payment.png",
+      "/images/bus/customer/payment_vnpay.png",
+      "/images/bus/customer/success.png",
+      "/images/bus/customer/payment_history.png",
+      "/images/bus/customer/payment_history_detail.png",
+      "/images/bus/customer/update_profile.png",
+      "/images/bus/customer/reset_password.png",
+
+      //Vendor images
+      "/images/bus/vendor/car.png",
+      "/images/bus/vendor/routes.png",
+      "/images/bus/vendor/schedule.png",
+      "/images/bus/vendor/driver.png",
+      "/images/bus/vendor/setting.png",
+    ],
   },
 ];
 
