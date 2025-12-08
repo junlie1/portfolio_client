@@ -78,25 +78,27 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
               About Me.
             </h3>
             <p className="mt-1 text-xs sm:text-sm font-medium text-slate-500">
-              Interactive Front-end developer.
+              Full-stack Developer.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-slate-700">
-              I&apos;m Nguyễn Lê Trung, a developer who loves making interactive
-              web experiences. I enjoy resolving design problems, creating smart
-              user interfaces and building useful web applications.
+              I&apos;m Nguyễn Lê Trung, a full-stack developer who enjoys
+              building end-to-end web applications. I like turning ideas into
+              usable products, from designing clear user flows to implementing
+              robust APIs and data layers.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-slate-700">
-              When I&apos;m not coding, I keep learning new tools and try to
-              improve my problem-solving skills through real projects. I&apos;m
-              currently looking for internship opportunities.
+              When I&apos;m not coding, I explore new tools in the TypeScript,
+              React, and backend ecosystem, and sharpen my problem-solving
+              skills through real projects. I&apos;m currently looking for
+              full-stack or backend internship opportunities.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 sm:gap-4 text-2xl sm:text-3xl">
               <span>⚛️</span>
               <span>💻</span>
               <span>{`</>`}</span>
-              <span className="text-base sm:text-lg font-semibold">JS</span>
+              <span>TS</span>
             </div>
           </div>
         </div>

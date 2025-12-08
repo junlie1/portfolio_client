@@ -33,7 +33,7 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
               text-center sm:text-left
             "
           >
-            Interactive Front-end Developer
+            Full-stack Developer
           </p>
 
           <h1
@@ -59,8 +59,8 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
             "
             style={{ fontFamily: "'Times New Roman', Times, serif" }}
           >
-            I love crafting interactive, modern interfaces and bringing ideas to
-            life with clean code.
+            I build reliable backend services and modern, interactive user
+            interfaces, turning ideas into polished, scalable products.
           </p>
         </div>
 
