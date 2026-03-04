@@ -59,8 +59,11 @@ export const HeroContent = ({ onOpen }: HeroContentProps) => {
             "
             style={{ fontFamily: "'Times New Roman', Times, serif" }}
           >
-            I build reliable backend services and modern, interactive user
-            interfaces, turning ideas into polished, scalable products.
+            Fullstack Developer with strong hands-on experience in React.js,
+            Redux Toolkit, and TypeScript, building scalable and responsive web
+            applications. Skilled in managing complex state with Redux,
+            integrating RESTful APIs in Agile environments, with a strong focus
+            on clean, maintainable code and high-quality user interfaces.
           </p>
         </div>
 

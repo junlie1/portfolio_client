@@ -31,11 +31,11 @@ export const projectsData: ProjectDetail[] = [
     role: "Fullstack Developer",
     period: "09/2024 - 12/2024",
     highlights: [
-      "Built a multi-store e-commerce system with real-time inventory management and Stripe-based payment integration.",
-      "Led a small development team, managing schedules and coordinating task assignments.",
-      "Developed cross-platform mobile features using Flutter, applying lifecycle concepts similar to React Native.",
-      "Implemented backend services with Node.js and MongoDB, ensuring scalable data structures.",
-      "Integrated Cloudinary for image and asset management, improving media handling performance.",
+      "Developed the multi-store web platform using ReactJS and Tailwind CSS, focusing on building clean and responsive UI components.",
+      "Led a small development team, taking ownership of task coordination and actively collaborating to solve daily technical challenges.",
+      "Implemented backend services with Node.js and MongoDB, writing maintainable code to support scalable data structures.",
+      "Developed cross-platform mobile features using Flutter, applying core frontend concepts like component lifecycles and state management.",
+      "Integrated Cloudinary for asset management, optimizing image load times and improving overall application performance.",
     ],
 
     links: [
@@ -155,11 +155,11 @@ export const projectsData: ProjectDetail[] = [
     role: "Fullstack Developer",
     period: "01/2025 - 04/2025",
     highlights: [
-      "Prototyped route, schedule, and seat-selection screens with responsive layouts.",
-      "Implemented paginated, lazy-loaded lists with proper loading, empty, and error states.",
-      "Built Python scripts to process chatbot training data and support AI model integration.",
-      "Applied Firebase Functions to automate backend tasks and support chatbot workflows.",
-      "Integrated Firebase Storage and Cloudinary to handle media and asset management.",
+      "Built responsive interactive screens using ReactJS, focusing on clean UI implementation and smooth user flow.",
+      "Managed complex application state using Redux Toolkit to keep data synchronized across components.",
+      "Improved frontend performance by implementing paginated, lazy-loaded lists with proper loading and error states.",
+      "Applied Firebase Functions to automate backend tasks and support chatbot workflows, keeping the overall architecture clean.",
+      "Built Python scripts to process chatbot training data and integrate AI models in the project.",
     ],
     links: [
       {
