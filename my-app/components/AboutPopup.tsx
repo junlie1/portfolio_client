@@ -116,7 +116,7 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
           >
             <div>
               <label className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-slate-300">
-                Name *
+                Your Name *
               </label>
               <input
                 type="text"
@@ -131,7 +131,7 @@ export default function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
 
             <div>
               <label className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-slate-300">
-                E-mail *
+                Your E-mail *
               </label>
               <input
                 type="email"
